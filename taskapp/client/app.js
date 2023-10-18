@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
       if (rmvBtn) {
         rmvBtn.addEventListener("click", async (e) => {
-          console.log(e.target);
+          const eT = e.target;
+          console.log(eT.parentElement);
+          await reqApi(eT.parentElement, "DELETE");
         });
       }
     });
