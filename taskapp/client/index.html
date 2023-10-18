@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Task Manager</h1>
+    </header>
+    <main>
+      <section>
+        <form class="submitForm" action="">
+          <legend>Add Task</legend>
+          <label for="name">Enter Task Name</label>
+          <input type="text" name="name" id="name" />
+          <label for="dueDate">Enter Task due date</label>
+          <input type="date" name="dueDate" id="dueDate" />
+
+          <button type="submit" class="submitBtn">Submit</button>
+        </form>
+      </section>
+
+      <section>
+        <h2 class="h2List">Task List</h2>
+        <ol class="taskOL">
+          <!-- <li>
+            <input type="checkbox" />
+            <span>check asdadsadawdwadacheck</span>
+            <button>Edit</button>
+            <button>X</button>
+          </li>
+
+          <li>
+            <input type="checkbox" />
+            <span>check asdadsadawdwadacheck</span>
+            <button>Edit</button>
+            <button>X</button>
+          </li> -->
+        </ol>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

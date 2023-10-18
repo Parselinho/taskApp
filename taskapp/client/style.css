@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: hsla(167, 53%, 71%, 0.849);
+  padding: 1.2em;
+  margin-bottom: 1.1em;
+  text-align: center;
+}
+
+.submitForm {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.submitForm legend {
+  font-weight: bold;
+  margin-bottom: 1.2em;
+}
+
+.submitForm label {
+  margin-bottom: 0.65em;
+  font-size: 1.2em;
+}
+
+.submitForm input {
+  margin-bottom: 1.1em;
+  padding: 1.1em;
+  width: 50%;
+  max-width: 400px;
+  border-radius: 5%;
+}
+
+.h2List {
+  text-align: center;
+  margin: 1.2em;
+}
+
+.taskOL {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+}
+
+ol li {
+  text-decoration: none;
+  list-style-type: none;
+  margin-bottom: 0.65em;
+  padding: 0.65em;
+  border: 1px solid black;
+  display: flex;
+  align-items: baseline;
+}
+
+ol li input {
+  margin-right: 0.65em;
+  align-self: center;
+}
+
+ol li button {
+  margin: 0.5em;
+  padding: 0.25em;
+}
