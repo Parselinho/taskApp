@@ -26,15 +26,20 @@ document.addEventListener("DOMContentLoaded", (e) => {
       return newTask.render();
     });
     $li.forEach((li) => {
-      const editBtn = document.querySelector(".editBtn");
-      const rmvBtn = document.querySelector(".removeBtn");
+      const editBtn = li.querySelector(".editBtn");
+      const rmvBtn = li.querySelector(".removeBtn");
 
-      editBtn.addEventListener("click", async (e) => {
-        console.log("clickedEdit");
-      });
-      rmvBtn.addEventListener("click", async (e) => {
-        console.log("rmvBtnClicked");
-      });
+      if (editBtn) {
+        editBtn.addEventListener("click", (e) => {
+          console.log(e.target);
+        });
+      }
+
+      if (rmvBtn) {
+        rmvBtn.addEventListener("click", async (e) => {
+          console.log(e.target);
+        });
+      }
     });
   };
 
@@ -45,7 +50,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
       dueDate: taskDueDateInput.value,
     };
     console.log(taskBody);
-    reqApi(taskBody, "POST");
+    await reqApi(taskBody, "POST");
+    getApi();
   });
 
   const reqApi = async (body, method) => {
